@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Elegant Portfolio of Szabolcs A. Csík</title>
+  <style>
+    body {
+      background-color: #1d1d1d;
+      color: #ffffff;
+      font-family: 'Cinzel', serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    header {
+      text-align: center;
+      padding: 6em 2em;
+      background-color: #191919;
+      background-image: url('moonlight.gif');
+      background-size: cover;
+      background-blend-mode: overlay;
+      position: relative;
+    }
+
+    h1 {
+      color: #c97d5e;
+      font-size: 5em;
+      margin-bottom: 0.5em;
+      text-shadow: 3px 3px 6px #000000;
+      animation: flicker 1s infinite alternate-reverse;
+    }
+
+    p {
+      font-size: 2em;
+      animation: slideIn 1s ease-out;
+    }
+
+    section {
+      padding: 4em;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .project {
+      flex: 1 1 400px;
+      margin: 2em;
+      border: 3px solid #c97d5e;
+      border-radius: 15px;
+      padding: 2em;
+      background-color: #191919;
+      box-shadow: 0px 0px 20px #c97d5e;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      animation: fadeIn 1s ease-out;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, rgba(25, 25, 25, 0), #191919);
+      pointer-events: none;
+    }
+
+    .project:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 0px 30px #c97d5e;
+    }
+
+    h2 {
+      color: #c97d5e;
+      font-size: 3.5em;
+      text-shadow: 3px 3px 6px #000000;
+      animation: rotateColor 5s infinite linear;
+      margin-bottom: 0.5em;
+    }
+
+    .project-description {
+      font-size: 1.8em;
+      animation: slideIn 1s ease-out;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 2em;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .social-icon {
+      margin: 0 1em;
+      font-size: 3em;
+      color: #c97d5e;
+      transition: color 0.5s ease-in-out;
+      animation: float 3s infinite ease-in-out;
+    }
+
+    .social-icon:hover {
+      color: #9c5f48;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2em;
+      background-color: #191919;
+      position: relative;
+    }
+
+    .heartbeat {
+      animation: heartbeat 1s infinite;
+    }
+
+    @keyframes heartbeat {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.04);
+      }
+    }
+
+    @keyframes flicker {
+      0%, 100% {
+        opacity: 1;
+      }
+      50% {
+        opacity: 0.8;
+      }
+    }
+
+    @keyframes slideIn {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes rotateColor {
+      0% {
+        filter: hue-rotate(0deg);
+      }
+      100% {
+        filter: hue-rotate(360deg);
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>The Elegant Portfolio of  Szabolcs A. Csík</h1>
+    <p>Welcome to my refined collection of projects and endeavors.</p>
+  </header>
+
+  <section>
+    <div class="project">
+      <h2>Timeless Web Presence</h2>
+      <p class="project-description">
+        Crafted a web presence that exudes sophistication and stands the test of time. Combining elegance with modernity, this creation reflects the essence of enduring style.
+      </p>
+    </div>
+
+    <div class="project">
+      <h2>Enigmatic App Development</h2>
+      <p class="project-description">
+        Developed an enigmatic mobile app that seamlessly blends mystery with intuitive design. Users will be drawn into a world of intrigue, experiencing the extraordinary through seamless functionality.
+      </p>
+    </div>
+
+    <div class="project">
+      <h2>Sublime Data Insights</h2>
+      <p class="project-description">
+        Engineered a data analytics platform that unravels the mysteries of user behavior. Dive into the sublime realm of analytics to uncover insights and optimize strategic decisions.
+      </p>
+    </div>
+  </section>
+
+
+  <footer>
+    <p class="heartbeat">&copy; 2024 The Elegant Portfolio </p>
+  </footer>
+
+</body>
+</html>
